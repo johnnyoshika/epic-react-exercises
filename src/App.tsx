@@ -1,6 +1,7 @@
 import reactLogo from './assets/react.svg';
 import Home from './routes/Home';
 import TicTacToe from './routes/TicTacToe';
+import VanillaTilt from './routes/VanillaTilt';
 import viteLogo from '/vite.svg';
 import {
   BrowserRouter as Router,
@@ -23,6 +24,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tic-tac-toe" element={<TicTacToe />} />
+          <Route path="/vanilla-tilt" element={<VanillaTilt />} />
         </Routes>
       </Router>
     </div>

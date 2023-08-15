@@ -4,7 +4,8 @@ const Home = () => {
   return (
     <div>
       <div>
-        <Link to="/tic-tac-toe">TicTacToe</Link>
+        <Link to="/tic-tac-toe">TicTacToe</Link> |{' '}
+        <Link to="/vanilla-tilt">VanillaTilt</Link>
       </div>
     </div>
   );
