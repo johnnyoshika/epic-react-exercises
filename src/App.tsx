@@ -1,4 +1,5 @@
 import reactLogo from './assets/react.svg';
+import FetchingPokemons from './routes/FetchingPokemons';
 import Home from './routes/Home';
 import TicTacToe from './routes/TicTacToe';
 import VanillaTilt from './routes/VanillaTilt';
@@ -25,6 +26,10 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/tic-tac-toe" element={<TicTacToe />} />
           <Route path="/vanilla-tilt" element={<VanillaTilt />} />
+          <Route
+            path="/fetching-pokemons"
+            element={<FetchingPokemons />}
+          />
         </Routes>
       </Router>
     </div>

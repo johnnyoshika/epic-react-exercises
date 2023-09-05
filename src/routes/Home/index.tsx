@@ -5,7 +5,8 @@ const Home = () => {
     <div>
       <div>
         <Link to="/tic-tac-toe">TicTacToe</Link> |{' '}
-        <Link to="/vanilla-tilt">VanillaTilt</Link>
+        <Link to="/vanilla-tilt">VanillaTilt</Link> |{' '}
+        <Link to="/fetching-pokemons">FetchingPokemons</Link>
       </div>
     </div>
   );
