@@ -4,6 +4,7 @@ import Form from './Form';
 import Loading from './Loading';
 import ErrorAlert from './ErrorAlert';
 import Result from './Result';
+import ErrorBoundary from './ErrorBoundary';
 
 const FetchingPokemons = () => {
   const [pokemonName, setPokemonName] = useState('');
@@ -48,9 +49,12 @@ const FetchingPokemons = () => {
   };
 
   return (
-    <div>
+    <ErrorBoundary>
       {state.error && (
-        <ErrorAlert error={state.error} handleRetry={handleSubmit} />
+        <ErrorAlert
+          error={state.error.test}
+          handleRetry={handleSubmit}
+        />
       )}
       {state.loading ? (
         <Loading />
@@ -62,7 +66,7 @@ const FetchingPokemons = () => {
         />
       )}
       <Result pokemon={state.data} />
-    </div>
+    </ErrorBoundary>
   );
 };
 
