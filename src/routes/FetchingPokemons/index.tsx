@@ -4,7 +4,7 @@ import Form from './Form';
 import Loading from './Loading';
 import ErrorAlert from './ErrorAlert';
 import Result from './Result';
-import ErrorBoundary from './ErrorBoundary';
+import { ErrorBoundary } from 'react-error-boundary';
 
 const FetchingPokemons = () => {
   const [pokemonName, setPokemonName] = useState('');
@@ -49,10 +49,10 @@ const FetchingPokemons = () => {
   };
 
   return (
-    <ErrorBoundary>
+    <ErrorBoundary fallback={<h1>Something went wrong</h1>}>
       {state.error && (
         <ErrorAlert
-          error={state.error.test}
+          error={state.error.foo}
           handleRetry={handleSubmit}
         />
       )}
