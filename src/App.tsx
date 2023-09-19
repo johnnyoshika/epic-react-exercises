@@ -1,6 +1,7 @@
 import reactLogo from './assets/react.svg';
 import FetchingPokemons from './routes/FetchingPokemons';
 import Home from './routes/Home';
+import SafeAsync from './routes/SafeAsync';
 import TicTacToe from './routes/TicTacToe';
 import VanillaTilt from './routes/VanillaTilt';
 import viteLogo from '/vite.svg';
@@ -30,6 +31,7 @@ const App = () => {
             path="/fetching-pokemons"
             element={<FetchingPokemons />}
           />
+          <Route path="/safe-async" element={<SafeAsync />} />
         </Routes>
       </Router>
     </div>
